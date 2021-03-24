@@ -1,0 +1,108 @@
+<html lang="pt-br">
+
+    <link rel="stylesheet" href="atropelamentos.css">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIGILANTE - Atropelamnetos</title>
+
+    <div class="topnav">
+        <img class="log" src="logo.png" alt="some text">
+
+        <a class="active" href="#atropelamentos">ATROPELAMENTOS</a>
+        <a href="mapa.html" target="_self">MAPA</a>
+        <a href="index.html" target="_self">SOBRE</a>
+        
+      </div>
+
+</head>
+
+<body>
+
+    <div class="imagens"><img src="gambaorelhabranca.jpg" alt="some text" width="400px" ></div>
+        <div class="imagens"><img src="gambaorelhapreta.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="tamanduamirim.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="cachorromato.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="taturabomolecomum.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="tatugalinha.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="irara.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="tatupeba.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="loboguara.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="tamanduabandeira.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="furaogrande.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="oncaparda.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="quati.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="jaguatirica.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="anta.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="maopelada.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="jaguarundi.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="prea.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="paca.jpg" alt="some text" width="400px"></div>
+        <div class="imagens"><img src="capivara.jpg" alt="some text" width="400px"></div>
+        
+
+
+    
+
+    <div class="dados">
+    
+    <div id="atropelamentos">
+        
+            
+           
+    
+        </div>
+    </div>
+        
+
+    <script>
+        // URL do serviço de atropelamentos
+        let URL = 'http://api-vigilante.herokuapp.com/atropelamento';
+
+        // Consome o serviço de atropelamentos
+        fetch(URL)
+            .then(resposta => {
+                // Trata a resposta do serviço
+                resposta.json().then(atropelamentos => {
+                    // Processa cada um dos atropelamentos
+                    let lista = '<ul style="list-style: none;">';
+
+                       
+                    atropelamentos.forEach(atropelamento => {
+                        // É aqui que a mágica acontece!
+
+                       
+                        let quantidadeChuva = atropelamento.quantidadeChuvosa;
+                        let quantidadeEpocaSeca = atropelamento.quantidadeSeca;
+                        let nomeEspecie = atropelamento.especie.nomePopular;
+                        let nomeEspecieCientifico = atropelamento.especie.nomeCientifico;
+                        
+                        
+                        let item = `<li>  <br> ${nomeEspecie}
+
+                            <p>Nome científico: ${nomeEspecieCientifico} <br>
+                                
+                            Quantidade de atropelamentos em época de chuva: ${quantidadeChuva}<br>
+
+                            Quantidade de atropelamentos em época de seca: ${quantidadeEpocaSeca}<br>
+
+                            Quantidade de atropelamentos entre Anastácio e Campo Grande : ${atropelamento.quantidadeCampoGrandeAquidauana} <br> <br> <br>
+
+                           <\p><\li>`;
+                        lista += item;
+                    });
+                        
+                    '</ul>';
+
+                    // Injeta a lista de atropelamentos na div para ser exibida na página
+                    document.getElementById('atropelamentos').innerHTML = lista;
+                });
+            })
+    </script>
+
+<div class="grafico">
+    <img src="grafico.jpg"  width="370" height="380">
+</div>
+
+ 
+</body></html>

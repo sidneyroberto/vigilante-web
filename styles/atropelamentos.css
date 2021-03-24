@@ -1,0 +1,116 @@
+html, body {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  background-color:#F5E4D7;
+}
+
+.log{
+  width: 150px;
+  height: 150px;
+  margin-left: 100px;
+  margin-top:25px ;
+}
+
+.topnav {
+  background-color: #415D43;
+  height: 200px;
+  overflow: hidden;
+
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: right;
+color: #363020;
+text-align: center;
+padding: 90px 105px;
+text-decoration: none;
+font-size: 20px;
+font-family: 'Antic Slab', serif;
+
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color:  #CDC5B4;
+}
+
+.titulo{
+  display: table;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #b6e0b9,#c0f0c3, #d0f5d2);
+  margin: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+ 
+ }
+
+ h2{
+  text-align: center;
+  text-align: justify;
+  font-family: 'Antic Slab', serif;
+  font-size: 50px;
+  letter-spacing: 6px;
+  text-shadow: 5px 5px 3px #d1ac17;
+  margin-left: 400px;
+  margin-right: 140px;
+  margin-top: 50px;
+  line-height: 1.9;
+  color: #363020;
+  
+  }
+
+ .titulo .texto{
+   font-size: 35px;
+ }
+
+ .dados{
+  position: relative;
+  border-width:2px;
+  width: 400px;
+  height: 400px;
+  left:650px;
+  bottom: 6450px;
+  float: left;
+  text-align: justify;
+  font-size: 20px;
+
+   
+ }
+ 
+ li{
+ 
+  
+  text-align: justify;
+    letter-spacing: 2.5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #363020;
+    line-height: 1.5;
+    width: 400px;
+    height: 300px;
+ }
+ 
+
+.imagens{
+  display: table;
+  padding-top: 50px;
+  padding-left:50px;
+  
+ 
+}
+
+
+.grafico{
+  padding-right: 50px;
+  padding-left: 250px;
+  
+ 
+}
+
+
